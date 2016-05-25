@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 from pygame import *
+import os
 
-
+path = os.path.dirname(os.path.abspath(__file__))
 BLACK = (0, 0, 0)
 BLACK2 = (0, 0, 0)
 WHITE = (255, 255, 255)
