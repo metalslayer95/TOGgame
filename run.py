@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from main_menu import *
-
+from level import *
+from character import *
 '''
 Final
 Usar TilesMap
@@ -31,15 +32,15 @@ Pausa:
 
 
 
-
+ ## modo testing de juego, menu obviado
 def run_Game():
     main_menu = Main_menu()
     pause_menu = Pause_menu()
-    main_menu.draw()
+    #main_menu.draw()
     state = main_menu
 
-    onMenu = 1
-    onGame = 0
+    onMenu = 0
+    onGame = 1
     while onMenu:
         for ev in event.get():
             if ev.type == QUIT:
@@ -48,7 +49,8 @@ def run_Game():
                 return
             elif ev.type == KEYDOWN:
                 if not first_screen(main_menu, ev):
-                    second_screen(main_menu, ev)
+                    if not second_screen(main_menu, ev):
+                        third_screen(main_menu, ev)
                 main_menu.drawFocus()
                 if main_menu.current_screen == len(main_menu.screens):
                     onMenu = 0
@@ -56,8 +58,14 @@ def run_Game():
                     main_menu.current_screen -= 1
         display.update()
         clock.tick(60)
+    display.set_mode((1024,700))
+    if main_menu.charSelect == 0:
+        player = WaveController()
+    elif main_menu.charSelect == 1:
+        player = SpearBearer()
+    screen.fill(BLACK)
     while onGame:
-            print "On game now"
+            keys = key.get_pressed()
             for ev in event.get():
                 if ev.type == QUIT:
                     display.quit()
@@ -66,8 +74,17 @@ def run_Game():
                 elif ev.type == KEYDOWN:
                     if ev.key == K_p:
                         image.save(screen, path + "/.tmp/game.png")
-                        pause_menu.paused(state)
-            main_menu.draw()
+                        pause_menu.paused()
+            if keys[K_DOWN]:
+                player.down()
+            if keys[K_UP]:
+                player.up()
+            if keys[K_RIGHT]:
+                player.right()
+            if keys[K_LEFT]:
+                player.left()
+            screen.fill(BLACK)
+            all_sprites.draw(screen)
             display.update()
             clock.tick(60)
     quit()

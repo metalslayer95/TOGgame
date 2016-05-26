@@ -10,8 +10,8 @@ YELLOW = (184, 132, 11)
 RED = (165, 42, 42)
 GREEN = (0, 255, 0)
 screen = None
-ancho = 800
-alto = 600
+ancho = 778
+alto = 405
 size = [ancho, alto]
 cx, cy = ancho / 2, alto / 2
 init()
@@ -21,7 +21,7 @@ clock = time.Clock()
 
 all_sprites = sprite.Group()
 
-npc = sprite.Group()
+npcs = sprite.Group()
 
 enemies = sprite.Group()
 

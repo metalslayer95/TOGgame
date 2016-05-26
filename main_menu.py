@@ -26,24 +26,26 @@ class Main_menu():
         # TODO: Cambiar para transicion
         #if self.current_screen == 0:
         #    self.screens[self.current_screen][0].fadeOutTransition()
+
         if self.current_screen < len(self.screens):
             self.current_screen += 1
         if self.current_screen == len(self.screens):
+            print "salgo",self.current_screen
             return
+
+        print len(self.screens)
+        print self.current_screen
         pos = self.screens[self.current_screen][self.focusOnDialog].pos
         import os
         os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (pos[0], pos[1])
         if self.current_screen <= 2:
-            print "Cambiando screen a "+str(self.focusOnDialog)
             self.scr = self.screens[self.current_screen][self.focusOnDialog]
             self.scr.draw()
         elif self.current_screen == 3 and self.focusOnDialog == 0:
-            print "hola"
-            self.scr = self.screens[self.current_screen][self.diffSelect]
+            self.scr = self.screens[self.current_screen][0]
             self.scr.draw()
         elif self.current_screen == 3 and self.focusOnDialog == 1:
-            print "adios"
-            self.scr = self.screens[self.current_screen][self.loadSelect]
+            self.scr = self.screens[self.current_screen][1]
             self.scr.draw()
 
 
@@ -52,10 +54,13 @@ class Main_menu():
         select = Surface.convert_alpha(select)
         if self.current_screen == 1:
             self.scr.draw()
-            screen.blit(select, [450,340+40*self.focusOnDialog])
-        elif self.current_screen == 2 and self.focusOnDialog == 0 :
+            screen.blit(select, [400, 240 + 40 * self.focusOnDialog])
+        elif self.current_screen == 2 and self.focusOnDialog == 0:
             self.scr.draw()
-            screen.blit(select, [450,340+80*self.diffSelect])
+            screen.blit(select, [420, 280+80 * self.diffSelect])
+        elif self.current_screen == 3 and self.focusOnDialog == 0:
+            self.scr.draw()
+            screen.blit(select, [280 + 400 * self.charSelect, 500])
         else:
             self.draw()
 

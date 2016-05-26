@@ -5,10 +5,11 @@ from context import *
 class Pause_menu():
 
     def __init__(self):
-        cfdialog = Dialog("Configurar teclado", [350, 300], None, 20)
-        adialog = Dialog("  Ayuda", [400, 380], None, 20)
-        sdialog = Dialog("  Salir", [400, 460], None, 20)
-        screen1 = Screen("", (1024,700), (300,200), [cfdialog, adialog, sdialog], [], path + "/.tmp/game.png")
+        self.titledialog = Dialog("PAUSA",[250, 100],None, 80)
+        self.cfdialog = Dialog("Configurar teclado", [350, 300], None, 20)
+        self.adialog = Dialog("  Ayuda", [400, 380], None, 20)
+        self.sdialog = Dialog("  Salir", [400, 460], None, 20)
+        screen1 = Screen("", (1024,700), (300,200), [self.titledialog,  self.cfdialog,  self.adialog,  self.sdialog], [], "")
         self.screens = []
         self.screens.append(screen1)
         self.focusOnDialog = 0
@@ -16,13 +17,14 @@ class Pause_menu():
 
     def update(self):
         if self.focusOnDialog == 0:
-            pass
+            print "Configurar teclado"
         elif self.focusOnDialog == 1:
-            pass
+            print "ayuda"
         elif self.focusOnDialog == 2:
             salir()
 
     def paused(self, state=None):
+        self.screens[0].update("", path + "/.tmp/game.png")
         while True:
                 for ev in event.get():
                     if ev.type == QUIT:
@@ -31,8 +33,6 @@ class Pause_menu():
                         return
                     if ev.type == KEYDOWN:
                         if ev.key == K_p:
-                            state.current_screen = 2
-                            state.draw(state.focusOnDialog)
                             self.focusOnDialog = 0
                             display.update()
                             return
@@ -53,20 +53,26 @@ class Pause_menu():
 
 
 class Screen:
-    def __init__(self, img="", size=(), pos=(), dialog=None, addin=[], tmpImg=""):
-        global screen
-        if img != "":
-            self.background = image.load(img)
-        else:
-            self.tmpImg = image.load(tmpImg)
-            self.tmpImg.set_alpha(128)
-            self.background = None
-        self.screen_size = size
+    def __init__(self, img="", size=(), pos=(), dialog=None, addins=[], tmpImg=""):
+        self.background = None
+        self.tmpImg = None
+        self.size = size
+        self.update(img, tmpImg)
         self.pos = pos
         self.dialog = dialog
+        self.addins = addins
 
-    def draw(self,addin = []):
-        screen = display.set_mode(self.screen_size)
+    def update(self,img="",tmpImg=""):
+        if img != "":
+            self.background = image.load(img)
+            self.background = transform.scale(self.background, self.size)
+        elif tmpImg != "":
+            self.tmpImg = image.load(tmpImg)
+            self.tmpImg.set_alpha(40)
+            self.background = None
+
+    def draw(self):
+        screen = display.set_mode(self.size)
         if self.background != None:
             screen.blit(self.background,[0,0])
         else:
@@ -77,10 +83,10 @@ class Screen:
         if dlg is not None and dlg != []:
             for d in dlg:
                 d.draw()
-        if addin == []:
+        if self.addins == []:
             return
         else:
-            for adds in addin:
+            for adds in self.addins:
                 screen.blit(adds[0],adds[1])
 
     def fadeInTransition(self):
@@ -138,7 +144,7 @@ class Dialog():
     def analize(self):
         for l in self.text:
             if l != " " and l != "-" :
-                letter = image.load("sprites/letters/"+l+".png")
+                letter = image.load("sprites/letters/"+l.upper()+".png")
                 letter = transform.scale(letter, (self.scale, self.scale))
                 self.message.append(letter)
             else:
@@ -182,25 +188,43 @@ def salir():
 
 def screen_creation(screens = []):
         dialog = Dialog("Presione una tecla para continuar", [250, 303], None, 10)
-        scr = Screen(path + "/sprites/starting_screen.jpg",(778,405),(300,200), [dialog],[])
+        scr = Screen(path + "/sprites/starting_screen.jpg",(778,405),(300, 200), [dialog],[])
         screens.append([scr])
-        ngdialog = Dialog("Nuevo juego", [400, 300],None, 20)
-        lgdialog = Dialog("Cargar juego", [400, 340],None, 20)
-        pvpdialog = Dialog("  Versus", [400, 380],None, 20)
-        hdialog = Dialog("  Ayuda", [400, 420],None, 20)
-        cdialog = Dialog(" Creditos", [400, 460],None, 20)
-        scr2 = Screen(path + "/sprites/main_menu_screen.jpg", (1024, 700), (200, 25), [ngdialog, lgdialog, pvpdialog, hdialog, cdialog], [])
+
+        ngdialog = Dialog("Nuevo juego", [350, 200],None, 20)
+        lgdialog = Dialog("Cargar juego", [350, 240],None, 20)
+        pvpdialog = Dialog("  Versus", [350, 280],None, 20)
+        hdialog = Dialog("  Ayuda", [350, 320],None, 20)
+        cdialog = Dialog(" Creditos", [350, 360],None, 20)
+        scr2 = Screen(path + "/sprites/main_menu_screen.jpg", (900, 700), (200, 25), [ngdialog, lgdialog, pvpdialog,                                                                          hdialog, cdialog], [])
         screens.append([scr2])
-        j1dialog = Dialog("Juego facil",[400,300],None,20)
-        j2dialog = Dialog("Juego normal",[400,380],None,20)
-        j3dialog = Dialog("Juego dificil",[400,460],None,20)
-        scr3 = Screen(path + "/sprites/main_menu_screen.jpg", (1024, 700), (200, 25), [j1dialog,j2dialog,j3dialog], [])
+
+        j1dialog = Dialog(" Juego facil",[350,240],None,20)
+        j2dialog = Dialog("Juego normal",[350,320],None,20)
+        j3dialog = Dialog("Juego dificil",[350,400],None,20)
+        scr3 = Screen(path + "/sprites/main_menu_screen.jpg", (900, 700), (200, 25), [j1dialog,j2dialog,j3dialog], [])
+
         p1 = Dialog("Personaje a nivel X",[400,300],None,20)
         p2 = Dialog("Personaje b nivel Y",[400,380],None,20)
-        scr4 = Screen("sprites/main_menu_screen.jpg", (1024, 700), (200, 25), [p1,p2], [])
+        scr4 = Screen("sprites/main_menu_screen.jpg", (900, 700), (200, 25), [p1,p2], [])
+
         d = Dialog("Modo versus en desarrollo",[400,300],None,20)
-        scr5 = Screen(path + "/sprites/main_menu_screen.jpg", (1024, 700), (200, 25), [d], [])
+        scr5 = Screen(path + "/sprites/main_menu_screen.jpg", (900, 700), (200, 25), [d], [])
+
         screens.append([scr3, scr4, scr5, scr5, scr5])
+
+        seldialog = Dialog("Seleccion de personaje",[50,0], None, 40)
+        d1 = Dialog("Wave controller",[200, 550], None, 20)
+        wavedialog = Dialog("Ataques magicos",[250, 600], None, 10)
+        d2 = Dialog("Spear bearer",[600, 550], None, 20)
+        speardialog = Dialog("Ataques fisicos",[650, 600], None, 10)
+        wave = image.load(path + "/sprites/wave_character.png")
+        wave = transform.scale(wave, (300,300))
+        spear = image.load(path + "/sprites/spear_character.png")
+        spear = transform.scale(spear, (300,300))
+        scr6 = Screen(path + "/sprites/char_screen.jpg", (1024, 700), (200, 25), [seldialog, wavedialog, speardialog, d1
+            , d2], [(wave, [200, 200]), (spear, [600, 200])])
+        screens.append([scr6, scr6, scr6, scr6])
 
 
 def first_screen(main_menu=None,ev=None):
@@ -233,9 +257,27 @@ def second_screen(main_menu=None, ev=None):
             main_menu.current_screen -= 2
             main_menu.update()
     if main_menu.focusOnDialog == 1 and main_menu.current_screen == 2:
-        if ev.key == K_DOWN  and main_menu.charSelect < 2:
+        if ev.key == K_DOWN  and main_menu.charSelect < 2: # aca se carga de bd
             main_menu.charSelect += 1
         elif ev.key == K_UP and main_menu.charSelect > 0:
+            main_menu.charSelect -= 1
+        elif ev.key == K_RETURN:
+            main_menu.update()
+            return 1
+        elif ev.key == K_ESCAPE:
+            main_menu.focusOnDialog = 0
+            main_menu.charSelect = 0
+            main_menu.current_screen -= 2
+            main_menu.update()
+    return 0
+
+
+def third_screen(main_menu=None, ev=None):
+    if main_menu.focusOnDialog == 0 and main_menu.current_screen == 3:
+        print "entro"
+        if ev.key == K_RIGHT and main_menu.charSelect < 1:
+            main_menu.charSelect += 1
+        elif ev.key == K_LEFT and main_menu.charSelect > 0:
             main_menu.charSelect -= 1
         elif ev.key == K_RETURN:
             main_menu.update()
