@@ -67,7 +67,6 @@ class Screen:
 
     def draw(self,addin = []):
         screen = display.set_mode(self.screen_size)
-        print self.background, "background"
         if self.background != None:
             screen.blit(self.background,[0,0])
         else:
@@ -173,7 +172,6 @@ class Dialog():
             self.blink = self.scale
         else:
             self.blink = self.blink + 1
-        print "blinkeo con",self.blink
 
 
 def salir():
@@ -202,4 +200,49 @@ def screen_creation(screens = []):
         scr4 = Screen("sprites/main_menu_screen.jpg", (1024, 700), (200, 25), [p1,p2], [])
         d = Dialog("Modo versus en desarrollo",[400,300],None,20)
         scr5 = Screen(path + "/sprites/main_menu_screen.jpg", (1024, 700), (200, 25), [d], [])
-        screens.append([scr3, scr4, scr5,scr5,scr5])
+        screens.append([scr3, scr4, scr5, scr5, scr5])
+
+
+def first_screen(main_menu=None,ev=None):
+    if ev.key == K_DOWN and main_menu.focusOnDialog < 4 and main_menu.current_screen == 1:
+        main_menu.focusOnDialog += 1
+    elif ev.key == K_UP and main_menu.focusOnDialog > 0 and main_menu.current_screen == 1:
+        main_menu.focusOnDialog -= 1
+    elif ev.key == K_RETURN and main_menu.current_screen < 2:
+        main_menu.update()
+        return 1
+    elif ev.key == K_ESCAPE and main_menu.current_screen > 0:
+        main_menu.focusOnDialog = 0
+        main_menu.current_screen -= 2
+        main_menu.update()
+    return 0
+
+
+def second_screen(main_menu=None, ev=None):
+    if main_menu.focusOnDialog == 0 and main_menu.current_screen == 2:
+        if ev.key == K_DOWN  and main_menu.diffSelect < 2:
+            main_menu.diffSelect += 1
+        elif ev.key == K_UP and main_menu.diffSelect > 0:
+            main_menu.diffSelect -= 1
+        elif ev.key == K_RETURN:
+            main_menu.update()
+            return 1
+        elif ev.key == K_ESCAPE:
+            main_menu.focusOnDialog = 0
+            main_menu.diffSelect = 0
+            main_menu.current_screen -= 2
+            main_menu.update()
+    if main_menu.focusOnDialog == 1 and main_menu.current_screen == 2:
+        if ev.key == K_DOWN  and main_menu.charSelect < 2:
+            main_menu.charSelect += 1
+        elif ev.key == K_UP and main_menu.charSelect > 0:
+            main_menu.charSelect -= 1
+        elif ev.key == K_RETURN:
+            main_menu.update()
+            return 1
+        elif ev.key == K_ESCAPE:
+            main_menu.focusOnDialog = 0
+            main_menu.charSelect = 0
+            main_menu.current_screen -= 2
+            main_menu.update()
+    return 0

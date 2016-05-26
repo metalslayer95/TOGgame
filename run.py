@@ -28,6 +28,10 @@ Pausa:
 9) Originalidad
 '''
 
+
+
+
+
 def run_Game():
     main_menu = Main_menu()
     pause_menu = Pause_menu()
@@ -41,19 +45,10 @@ def run_Game():
             if ev.type == QUIT:
                 display.quit()
                 quit()
-                graficando = 0
                 return
             elif ev.type == KEYDOWN:
-                if ev.key == K_DOWN and main_menu.focusOnDialog < len(main_menu.screens[main_menu.current_screen][0].dialog)-1\
-                        and main_menu.current_screen > 0:
-                    main_menu.focusOnDialog = main_menu.focusOnDialog + 1
-                elif ev.key == K_UP and main_menu.focusOnDialog > 0 and main_menu.current_screen > 0:
-                    main_menu.focusOnDialog = main_menu.focusOnDialog - 1
-                elif ev.key != K_UP and ev.key != K_DOWN and ev.key != K_ESCAPE:
-                    main_menu.update()
-                elif ev.key == K_ESCAPE and main_menu.current_screen > 0:
-                    main_menu.current_screen -= 2
-                    main_menu.update()
+                if not first_screen(main_menu, ev):
+                    second_screen(main_menu, ev)
                 main_menu.drawFocus()
                 if main_menu.current_screen == len(main_menu.screens):
                     onMenu = 0
