@@ -2,167 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb0d6fc7-b73e-4c70-be02-2d1db625008d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprites/wave_dead/0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprites/wave_dead/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprites/wave_dead/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprites/wave_dead/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprites/wave_dead/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprites/wave_dead/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enemy.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/level.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.tmp/game.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/anak.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/anguila.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rak.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/baam.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/baam_dead/0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/baam_dead/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/baam_dead/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/baam_dead/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/baam_dead/4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/baam_dead/5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/letters/47.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/letters/52.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/letters/u.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sprites/loading_screen.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/class.py" afterPath="$PROJECT_DIR$/character.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_up/0.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_up/0.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_up/1.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_up/1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_up/2.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_up/2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_up/3.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_up/3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_up/4.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_up/4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_up/5.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_up/5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_up/6.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_up/6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_up/7.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_up/7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_up/8.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_up/8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_down/0.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_down/0.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_down/1.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_down/1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_down/2.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_down/2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_down/3.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_down/3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_down/4.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_down/4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_down/5.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_down/5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_down/6.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_down/6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_down/7.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_down/7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_down/8.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_down/8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_left/0.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_left/0.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_left/1.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_left/1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_left/2.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_left/2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_left/3.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_left/3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_left/4.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_left/4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_left/5.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_left/5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_left/6.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_left/6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_left/7.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_left/7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_left/8.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_left/8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_right/0.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_right/0.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_right/1.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_right/1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_right/2.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_right/2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_right/3.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_right/3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_right/4.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_right/4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_right/5.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_right/5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_right/6.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_right/6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_right/7.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_right/7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sprites/baam_walk_right/8.png" afterPath="$PROJECT_DIR$/sprites/wave_walk_right/8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Capturas/Scan.jpg" afterPath="$PROJECT_DIR$/Capturas/Scan.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Capturas/Scan10001.jpg" afterPath="$PROJECT_DIR$/Capturas/Scan10001.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Capturas/Scan10002.jpg" afterPath="$PROJECT_DIR$/Capturas/Scan10002.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Capturas/Scan10003.jpg" afterPath="$PROJECT_DIR$/Capturas/Scan10003.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Capturas/Scan10004.jpg" afterPath="$PROJECT_DIR$/Capturas/Scan10004.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Capturas/togflow.png" afterPath="$PROJECT_DIR$/Capturas/togflow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Documento planeacion juego.docx" afterPath="$PROJECT_DIR$/Documento planeacion juego.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Documento planeacion juego.pdf" afterPath="$PROJECT_DIR$/Documento planeacion juego.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Font-v2.png" afterPath="$PROJECT_DIR$/Font-v2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Urek_Mazino.png" afterPath="$PROJECT_DIR$/Urek_Mazino.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/luchador1.PNG" afterPath="$PROJECT_DIR$/luchador1.PNG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/luchador2.PNG" afterPath="$PROJECT_DIR$/luchador2.PNG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/Tower_of_God_Logo.png" afterPath="$PROJECT_DIR$/sprites/Tower_of_God_Logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/items_s.png" afterPath="$PROJECT_DIR$/sprites/items_s.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/46.png" afterPath="$PROJECT_DIR$/sprites/letters/46.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/48.png" afterPath="$PROJECT_DIR$/sprites/letters/48.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/49.png" afterPath="$PROJECT_DIR$/sprites/letters/49.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/50.png" afterPath="$PROJECT_DIR$/sprites/letters/50.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/51.png" afterPath="$PROJECT_DIR$/sprites/letters/51.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/53.png" afterPath="$PROJECT_DIR$/sprites/letters/53.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/54.png" afterPath="$PROJECT_DIR$/sprites/letters/54.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/55.png" afterPath="$PROJECT_DIR$/sprites/letters/55.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/56.png" afterPath="$PROJECT_DIR$/sprites/letters/56.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/57.png" afterPath="$PROJECT_DIR$/sprites/letters/57.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/58.png" afterPath="$PROJECT_DIR$/sprites/letters/58.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/59.png" afterPath="$PROJECT_DIR$/sprites/letters/59.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/60.png" afterPath="$PROJECT_DIR$/sprites/letters/60.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/62.png" afterPath="$PROJECT_DIR$/sprites/letters/62.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/63.png" afterPath="$PROJECT_DIR$/sprites/letters/63.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/64.png" afterPath="$PROJECT_DIR$/sprites/letters/64.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/65.png" afterPath="$PROJECT_DIR$/sprites/letters/65.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/66.png" afterPath="$PROJECT_DIR$/sprites/letters/66.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/67.png" afterPath="$PROJECT_DIR$/sprites/letters/67.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/69.png" afterPath="$PROJECT_DIR$/sprites/letters/69.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/A.png" afterPath="$PROJECT_DIR$/sprites/letters/A.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/B.png" afterPath="$PROJECT_DIR$/sprites/letters/B.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/C.png" afterPath="$PROJECT_DIR$/sprites/letters/C.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/D.png" afterPath="$PROJECT_DIR$/sprites/letters/D.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/E.png" afterPath="$PROJECT_DIR$/sprites/letters/E.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/F.png" afterPath="$PROJECT_DIR$/sprites/letters/F.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/G.png" afterPath="$PROJECT_DIR$/sprites/letters/G.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/H.png" afterPath="$PROJECT_DIR$/sprites/letters/H.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/I.png" afterPath="$PROJECT_DIR$/sprites/letters/I.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/J.png" afterPath="$PROJECT_DIR$/sprites/letters/J.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/K.png" afterPath="$PROJECT_DIR$/sprites/letters/K.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/L.png" afterPath="$PROJECT_DIR$/sprites/letters/L.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/M.png" afterPath="$PROJECT_DIR$/sprites/letters/M.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/N.png" afterPath="$PROJECT_DIR$/sprites/letters/N.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/O.png" afterPath="$PROJECT_DIR$/sprites/letters/O.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/P.png" afterPath="$PROJECT_DIR$/sprites/letters/P.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/Q.png" afterPath="$PROJECT_DIR$/sprites/letters/Q.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/R.png" afterPath="$PROJECT_DIR$/sprites/letters/R.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/S.png" afterPath="$PROJECT_DIR$/sprites/letters/S.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/T.png" afterPath="$PROJECT_DIR$/sprites/letters/T.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/V.png" afterPath="$PROJECT_DIR$/sprites/letters/V.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/W.png" afterPath="$PROJECT_DIR$/sprites/letters/W.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/X.png" afterPath="$PROJECT_DIR$/sprites/letters/X.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/Y.png" afterPath="$PROJECT_DIR$/sprites/letters/Y.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/Z.png" afterPath="$PROJECT_DIR$/sprites/letters/Z.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/am.png" afterPath="$PROJECT_DIR$/sprites/letters/am.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/bm.png" afterPath="$PROJECT_DIR$/sprites/letters/bm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/cm.png" afterPath="$PROJECT_DIR$/sprites/letters/cm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/dm.png" afterPath="$PROJECT_DIR$/sprites/letters/dm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/dp.png" afterPath="$PROJECT_DIR$/sprites/letters/dp.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/em.png" afterPath="$PROJECT_DIR$/sprites/letters/em.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/fm.png" afterPath="$PROJECT_DIR$/sprites/letters/fm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/gm.png" afterPath="$PROJECT_DIR$/sprites/letters/gm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/hm.png" afterPath="$PROJECT_DIR$/sprites/letters/hm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/im.png" afterPath="$PROJECT_DIR$/sprites/letters/im.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/jm.png" afterPath="$PROJECT_DIR$/sprites/letters/jm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/km.png" afterPath="$PROJECT_DIR$/sprites/letters/km.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/lm.png" afterPath="$PROJECT_DIR$/sprites/letters/lm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/mm.png" afterPath="$PROJECT_DIR$/sprites/letters/mm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/nm.png" afterPath="$PROJECT_DIR$/sprites/letters/nm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/om.png" afterPath="$PROJECT_DIR$/sprites/letters/om.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/pc.png" afterPath="$PROJECT_DIR$/sprites/letters/pc.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/pm.png" afterPath="$PROJECT_DIR$/sprites/letters/pm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/qm.png" afterPath="$PROJECT_DIR$/sprites/letters/qm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/rm.png" afterPath="$PROJECT_DIR$/sprites/letters/rm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/sm.png" afterPath="$PROJECT_DIR$/sprites/letters/sm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/tm.png" afterPath="$PROJECT_DIR$/sprites/letters/tm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/letters/what.png" afterPath="$PROJECT_DIR$/sprites/letters/what.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/load_game_screen.png" afterPath="$PROJECT_DIR$/sprites/load_game_screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/main_menu_screen.jpg" afterPath="$PROJECT_DIR$/sprites/main_menu_screen.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/rak_s.png" afterPath="$PROJECT_DIR$/sprites/rak_s.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/select.png" afterPath="$PROJECT_DIR$/sprites/select.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/starting_screen.jpg" afterPath="$PROJECT_DIR$/sprites/starting_screen.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/urek.png" afterPath="$PROJECT_DIR$/sprites/urek.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites/yuri.png" afterPath="$PROJECT_DIR$/sprites/yuri.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/togdb.db" afterPath="$PROJECT_DIR$/togdb.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/game.png" afterPath="$PROJECT_DIR$/.tmp/game.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TOG.iml" afterPath="$PROJECT_DIR$/.idea/TOG.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/context.py" afterPath="$PROJECT_DIR$/context.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_menu.py" afterPath="$PROJECT_DIR$/main_menu.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/level.py" afterPath="$PROJECT_DIR$/level.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
     </list>
@@ -178,7 +22,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TOG$run.coverage" NAME="run Coverage Results" MODIFIED="1464301987450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TOG$run.coverage" NAME="run Coverage Results" MODIFIED="1464325552643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -189,32 +33,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="190" column="64" selection-start-line="190" selection-start-column="64" selection-end-line="190" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.41421568">
+              <caret line="146" column="53" selection-start-line="146" selection-start-column="53" selection-end-line="146" selection-end-column="53" />
               <folding>
-                <element signature="e#101#608#0" expanded="false" />
-                <element signature="e#640#828#0" expanded="false" />
-                <element signature="e#1889#1994#0" expanded="false" />
-                <element signature="e#2015#4396#0" expanded="false" />
-                <element signature="e#3190#3788#0" expanded="false" />
-                <element signature="e#3831#4396#0" expanded="false" />
-                <element signature="e#4418#6263#0" expanded="false" />
-                <element signature="e#6283#6353#0" expanded="false" />
-                <element signature="e#8707#9240#0" expanded="false" />
-                <element signature="e#9291#10384#0" expanded="false" />
+                <element signature="e#6401#8661#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="character.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="character.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/character.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="35" selection-end-column="36" />
               <folding>
                 <element signature="e#1330#1711#0" expanded="false" />
                 <element signature="e#1751#1820#0" expanded="false" />
@@ -226,21 +61,21 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="e#24#47#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="context.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/context.py">
+      <file leaf-file-name="level.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/level.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -264,27 +99,26 @@
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/sprites/context.py" />
         <option value="$PROJECT_DIR$/class.py" />
-        <option value="$PROJECT_DIR$/level.py" />
         <option value="$PROJECT_DIR$/main_menu.py" />
         <option value="$PROJECT_DIR$/enemy.py" />
         <option value="$PROJECT_DIR$/character.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/context.py" />
+        <option value="$PROJECT_DIR$/level.py" />
         <option value="$PROJECT_DIR$/run.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
-    <option name="y" value="70" />
-    <option name="width" value="1908" />
-    <option name="height" value="1010" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -311,6 +145,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -332,7 +167,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -434,21 +268,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <module name="TOG" />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -459,7 +279,6 @@
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
-      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
@@ -582,9 +401,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -593,22 +410,21 @@
       <changelist id="fb0d6fc7-b73e-4c70-be02-2d1db625008d" name="Default" comment="" />
       <created>1458002115883</created>
       <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
       <updated>1458002115883</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="70" width="1908" height="1010" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973767" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28303966" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28289473" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -640,382 +456,266 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/context.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-          <folding>
-            <element signature="e#2401#2516#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
           <folding>
-            <element signature="e#101#608#0" expanded="false" />
-            <element signature="e#640#828#0" expanded="false" />
-            <element signature="e#1889#1994#0" expanded="false" />
-            <element signature="e#2015#4396#0" expanded="false" />
-            <element signature="e#3190#3788#0" expanded="false" />
-            <element signature="e#3831#4396#0" expanded="false" />
-            <element signature="e#4418#6263#0" expanded="false" />
-            <element signature="e#6283#6353#0" expanded="false" />
-            <element signature="e#8707#9240#0" expanded="false" />
-            <element signature="e#9291#10384#0" expanded="false" />
+            <element signature="e#6401#8661#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/character.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#44#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="e#2401#2516#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#101#608#0" expanded="false" />
-            <element signature="e#640#828#0" expanded="false" />
-            <element signature="e#1889#1994#0" expanded="false" />
-            <element signature="e#2015#4396#0" expanded="false" />
-            <element signature="e#3190#3788#0" expanded="false" />
-            <element signature="e#3831#4396#0" expanded="false" />
-            <element signature="e#4418#6263#0" expanded="false" />
-            <element signature="e#6283#6353#0" expanded="false" />
-            <element signature="e#8707#9240#0" expanded="false" />
-            <element signature="e#9291#10384#0" expanded="false" />
+            <element signature="e#6401#8661#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2401#2516#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
           <folding>
-            <element signature="e#101#608#0" expanded="false" />
-            <element signature="e#640#828#0" expanded="false" />
-            <element signature="e#1889#1994#0" expanded="false" />
-            <element signature="e#2015#4396#0" expanded="false" />
-            <element signature="e#3190#3788#0" expanded="false" />
-            <element signature="e#3831#4396#0" expanded="false" />
-            <element signature="e#4418#6263#0" expanded="false" />
-            <element signature="e#6283#6353#0" expanded="false" />
-            <element signature="e#8707#9240#0" expanded="false" />
-            <element signature="e#9291#10384#0" expanded="false" />
+            <element signature="e#6401#8661#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2401#2516#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#101#608#0" expanded="false" />
-            <element signature="e#640#828#0" expanded="false" />
-            <element signature="e#1889#1994#0" expanded="false" />
-            <element signature="e#2015#4396#0" expanded="false" />
-            <element signature="e#3190#3788#0" expanded="false" />
-            <element signature="e#3831#4396#0" expanded="false" />
-            <element signature="e#4418#6263#0" expanded="false" />
-            <element signature="e#6283#6353#0" expanded="false" />
-            <element signature="e#8707#9240#0" expanded="false" />
-            <element signature="e#9291#10384#0" expanded="false" />
+            <element signature="e#6401#8661#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="e#24#44#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2401#2516#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#101#608#0" expanded="false" />
-            <element signature="e#640#828#0" expanded="false" />
-            <element signature="e#1889#1994#0" expanded="false" />
-            <element signature="e#2015#4396#0" expanded="false" />
-            <element signature="e#3190#3788#0" expanded="false" />
-            <element signature="e#3831#4396#0" expanded="false" />
-            <element signature="e#4418#6263#0" expanded="false" />
-            <element signature="e#6283#6353#0" expanded="false" />
-            <element signature="e#8707#9240#0" expanded="false" />
-            <element signature="e#9291#10384#0" expanded="false" />
+            <element signature="e#6401#8661#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="e#24#44#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding>
-            <element signature="e#2401#2516#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
-            <element signature="e#101#608#0" expanded="false" />
-            <element signature="e#640#828#0" expanded="false" />
-            <element signature="e#1889#1994#0" expanded="false" />
-            <element signature="e#2015#4396#0" expanded="false" />
-            <element signature="e#3190#3788#0" expanded="false" />
-            <element signature="e#3831#4396#0" expanded="false" />
-            <element signature="e#4418#6263#0" expanded="false" />
-            <element signature="e#6283#6353#0" expanded="false" />
-            <element signature="e#8707#9240#0" expanded="false" />
-            <element signature="e#9291#10384#0" expanded="false" />
+            <element signature="e#6401#8661#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="e#24#44#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2401#2516#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
-            <element signature="e#101#608#0" expanded="false" />
-            <element signature="e#640#828#0" expanded="false" />
-            <element signature="e#1889#1994#0" expanded="false" />
-            <element signature="e#2015#4396#0" expanded="false" />
-            <element signature="e#3190#3788#0" expanded="false" />
-            <element signature="e#3831#4396#0" expanded="false" />
-            <element signature="e#4418#6263#0" expanded="false" />
-            <element signature="e#6283#6353#0" expanded="false" />
-            <element signature="e#8707#9240#0" expanded="false" />
-            <element signature="e#9291#10384#0" expanded="false" />
+            <element signature="e#6401#8661#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="e#24#44#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2401#2516#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
-            <element signature="e#101#608#0" expanded="false" />
-            <element signature="e#640#828#0" expanded="false" />
-            <element signature="e#1889#1994#0" expanded="false" />
-            <element signature="e#2015#4396#0" expanded="false" />
-            <element signature="e#3190#3788#0" expanded="false" />
-            <element signature="e#3831#4396#0" expanded="false" />
-            <element signature="e#4418#6263#0" expanded="false" />
-            <element signature="e#6283#6353#0" expanded="false" />
-            <element signature="e#8707#9240#0" expanded="false" />
-            <element signature="e#9291#10384#0" expanded="false" />
+            <element signature="e#6401#8661#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="e#24#44#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,7 +723,7 @@
     <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-1577761422/pygame/time.py" />
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -1050,11 +750,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
+        <state vertical-scroll-proportion="0.0">
           <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
-          <folding>
-            <element signature="e#2401#2516#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,74 +760,56 @@
         <state />
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python2.7/dist-packages/pygame/sprite.py">
+    <entry file="file://$PROJECT_DIR$/enemy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1512">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enemy.py">
+    <entry file="file://$PROJECT_DIR$/context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.5367647">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/level.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/character.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="190" column="64" selection-start-line="190" selection-start-column="64" selection-end-line="190" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="35" selection-end-column="36" />
           <folding>
-            <element signature="e#101#608#0" expanded="false" />
-            <element signature="e#640#828#0" expanded="false" />
-            <element signature="e#1889#1994#0" expanded="false" />
-            <element signature="e#2015#4396#0" expanded="false" />
-            <element signature="e#3190#3788#0" expanded="false" />
-            <element signature="e#3831#4396#0" expanded="false" />
-            <element signature="e#4418#6263#0" expanded="false" />
-            <element signature="e#6283#6353#0" expanded="false" />
-            <element signature="e#8707#9240#0" expanded="false" />
-            <element signature="e#9291#10384#0" expanded="false" />
+            <element signature="e#1330#1711#0" expanded="false" />
+            <element signature="e#1751#1820#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/context.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/character.py">
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.41421568">
+          <caret line="146" column="53" selection-start-line="146" selection-start-column="53" selection-end-line="146" selection-end-column="53" />
           <folding>
-            <element signature="e#1330#1711#0" expanded="false" />
-            <element signature="e#1751#1820#0" expanded="false" />
+            <element signature="e#6401#8661#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -36,11 +36,11 @@ Pausa:
 def run_Game():
     main_menu = Main_menu()
     pause_menu = Pause_menu()
-    #main_menu.draw()
+    main_menu.draw()
     state = main_menu
-
-    onMenu = 0
-    onGame = 1
+    level = LevelOne()
+    onMenu = 1
+    onGame = 0
     while onMenu:
         for ev in event.get():
             if ev.type == QUIT:
@@ -63,7 +63,7 @@ def run_Game():
         player = WaveController()
     elif main_menu.charSelect == 1:
         player = SpearBearer()
-    screen.fill(BLACK)
+    level.draw()
     while onGame:
             keys = key.get_pressed()
             for ev in event.get():
@@ -83,7 +83,7 @@ def run_Game():
                 player.right()
             if keys[K_LEFT]:
                 player.left()
-            screen.fill(BLACK)
+            level.draw()
             all_sprites.draw(screen)
             display.update()
             clock.tick(60)

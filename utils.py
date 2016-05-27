@@ -144,7 +144,7 @@ class Dialog():
     def analize(self):
         for l in self.text:
             if l != " " and l != "-" :
-                letter = image.load("sprites/letters/"+l.upper()+".png")
+                letter = image.load("sprites/letters_2/"+l.upper()+".png")
                 letter = transform.scale(letter, (self.scale, self.scale))
                 self.message.append(letter)
             else:
@@ -185,6 +185,7 @@ def salir():
     display.quit()
     quit()
     exit()
+
 
 def screen_creation(screens = []):
         dialog = Dialog("Presione una tecla para continuar", [250, 303], None, 10)
