@@ -90,7 +90,7 @@ class Screen:
                 screen.blit(adds[0],adds[1])
 
     def fadeInTransition(self):
-        screen = display.set_mode(self.screen_size)
+        screen = display.set_mode(self.size)
         for i in range(0,255,2):
             for ev in event.get():
                 if ev.type == QUIT:
@@ -109,7 +109,7 @@ class Screen:
         self.draw()
 
     def fadeOutTransition(self):
-        screen = display.set_mode(self.screen_size)
+        screen = display.set_mode(self.size)
         for i in range(255,0,-2):
             for ev in event.get():
                 if ev.type == QUIT:
@@ -275,7 +275,6 @@ def second_screen(main_menu=None, ev=None):
 
 def third_screen(main_menu=None, ev=None):
     if main_menu.focusOnDialog == 0 and main_menu.current_screen == 3:
-        print "entro"
         if ev.key == K_RIGHT and main_menu.charSelect < 1:
             main_menu.charSelect += 1
         elif ev.key == K_LEFT and main_menu.charSelect > 0:
@@ -289,3 +288,4 @@ def third_screen(main_menu=None, ev=None):
             main_menu.current_screen -= 2
             main_menu.update()
     return 0
+

@@ -36,11 +36,11 @@ Pausa:
 def run_Game():
     main_menu = Main_menu()
     pause_menu = Pause_menu()
-    main_menu.draw()
-    state = main_menu
+    #main_menu.draw()
     level = LevelOne()
-    onMenu = 1
-    onGame = 0
+    onMenu = 0
+    onGame = 1
+    tick = 0
     while onMenu:
         for ev in event.get():
             if ev.type == QUIT:
@@ -64,6 +64,7 @@ def run_Game():
     elif main_menu.charSelect == 1:
         player = SpearBearer()
     level.draw()
+    camera = Camera(level.image.get_size()[0], level.image.get_size()[1])
     while onGame:
             keys = key.get_pressed()
             for ev in event.get():
@@ -75,17 +76,26 @@ def run_Game():
                     if ev.key == K_p:
                         image.save(screen, path + "/.tmp/game.png")
                         pause_menu.paused()
+                    else:
+                        player.action(ev.key)
             if keys[K_DOWN]:
-                player.down()
+                player.move_down()
+                #level.scroll(0, 5)
             if keys[K_UP]:
-                player.up()
+                player.move_up()
+                #level.scroll(0, -5)
             if keys[K_RIGHT]:
-                player.right()
+                player.move_right()
+                #level.scroll(6, 0)
             if keys[K_LEFT]:
-                player.left()
+                player.move_left()
+                #level.scroll(-5, 0)
             level.draw()
+            player.update(tick)
             all_sprites.draw(screen)
+            spells.draw(screen)
             display.update()
+            tick += 1
             clock.tick(60)
     quit()
 

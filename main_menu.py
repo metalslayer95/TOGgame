@@ -16,16 +16,17 @@ class Main_menu():
     def draw(self, index=0):
         if self.current_screen == len(self.screens):
             return
-        #if self.current_screen == 0: TODO: Cambiar para transicion
-        #    self.screens[self.current_screen][index].fadeInTransition()
-        #else:
-        self.scr.draw()
+
+        if self.current_screen == 0: #TODO: Cambiar para transicion
+            self.screens[self.current_screen][index].fadeInTransition()
+        else:
+            self.scr.draw()
         display.update()
 
     def update(self):
         # TODO: Cambiar para transicion
-        #if self.current_screen == 0:
-        #    self.screens[self.current_screen][0].fadeOutTransition()
+        if self.current_screen == 0:
+            self.screens[self.current_screen][0].fadeOutTransition()
 
         if self.current_screen < len(self.screens):
             self.current_screen += 1
