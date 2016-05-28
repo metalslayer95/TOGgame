@@ -77,19 +77,19 @@ def run_Game():
                         image.save(screen, path + "/.tmp/game.png")
                         pause_menu.paused()
                     else:
-                        player.action(ev.key)
+                        player.action(ev.key, tick)
             if keys[K_DOWN]:
                 player.move_down()
-                #level.scroll(0, 5)
+                level.update(player,2)
             if keys[K_UP]:
+                level.update(player,3)
                 player.move_up()
-                #level.scroll(0, -5)
             if keys[K_RIGHT]:
                 player.move_right()
-                #level.scroll(6, 0)
+                level.update(player,1)
             if keys[K_LEFT]:
                 player.move_left()
-                #level.scroll(-5, 0)
+                level.update(player,0)
             level.draw()
             player.update(tick)
             all_sprites.draw(screen)

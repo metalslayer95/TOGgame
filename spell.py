@@ -2,8 +2,6 @@
 from context import *
 
 
-
-
 class Mana_arrow(sprite.Sprite):
     def __init__(self):
         sprite.Sprite.__init__(self)
@@ -35,12 +33,18 @@ class Mana_arrow(sprite.Sprite):
             self.distance -= 5
         elif self.distance == 0:
             spells.remove(self)
+            player.spellsOnField.remove(self)
             self.distance = 1000
             self.update = self._update
 
-    def use(self):
+    def use(self,player,tick):
         spells.add(self)
+        self.update(player, tick)
         self.update = self.moving
+
+    def change_pos(self, dx, dy):
+        self.rect.x += dx
+        self.rect.y += dy
 
 
 class Mana_bomb(sprite.Sprite):
@@ -62,7 +66,6 @@ class Mana_bomb(sprite.Sprite):
         self.rect.y = player.rect.y
 
     def moving(self, player, tick):
-        print self.distance
         if self.distance > 0 and tick % 60:
             if self.direction == 0:
                 self.rect.y += 2
@@ -74,13 +77,21 @@ class Mana_bomb(sprite.Sprite):
                 self.rect.x -= 2
             self.distance -= 2
         elif self.distance == 0:
+            player.spellsOnField.remove(self)
             spells.remove(self)
             self.distance = 700
             self.update = self._update
 
-    def use(self):
-            spells.add(self)
-            self.update = self.moving
+    def use(self,player,tick):
+        spells.add(self)
+        self.update(player, tick)
+        self.update = self.moving
+
+
+    def change_pos(self, dx, dy):
+        self.rect.x += dx
+        self.rect.y += dy
+
 
 class Mana_shield(sprite.Sprite):
     def __init__(self):
@@ -107,6 +118,10 @@ class Mana_shield(sprite.Sprite):
             self.used = 1
             self.time = 30
             spells.add(self)
+
+    def change_pos(self, dx, dy): #unused
+        pass
+
 
 class Mana_storm(sprite.Sprite):
     def __init__(self):

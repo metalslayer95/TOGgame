@@ -25,6 +25,7 @@ class WaveController(sprite.Sprite):
         self.rect.x = screen.get_size()[0]/2
         self.rect.y = screen.get_size()[1]/2
         self.spells = [Mana_arrow(), Mana_shield(), Mana_bomb(), Mana_storm()]
+        self.spellsOnField = []
         self.i = 0
         self.attack = 0
         self.pos = [self.rect.x, self.rect.y]
@@ -39,7 +40,12 @@ class WaveController(sprite.Sprite):
         player.add(self)
         all_sprites.add(self)
 
-    def action(self, key=None):
+    def change_pos(self, dx, dy):
+        self.rect.x += dx
+        self.rect.y += dy
+
+    def action(self, key=None, tick=0):
+        print self.spellsOnField
         for spell in self.spells:
             print spell.cooldown,
         if key == K_SPACE and self.attack == 0:
@@ -47,23 +53,27 @@ class WaveController(sprite.Sprite):
         elif key == K_q and self.mana > 10 and self.spells[0].cooldown == 0:
             self.mana -= 10
             self.spells[0].cooldown += 3
-            self.spells[0].use()
+            self.spellsOnField.append(Mana_arrow())
+            self.spellsOnField[-1].use(self, tick)
         elif key == K_w and self.mana > 20 and self.spells[1].cooldown == 0:
             self.mana -= 30
             self.spells[1].cooldown += 60
-            self.spells[1].use()
+            self.spellsOnField.append(Mana_shield())
+            self.spellsOnField[-1].use()
         elif key == K_e and self.mana > 30 and self.spells[2].cooldown == 0:
             self.mana -= 20
             self.spells[2].cooldown += 5
-            self.spells[2].use()
+            self.spellsOnField.append(Mana_bomb())
+            self.spellsOnField[-1].use(self, tick)
         elif key == K_r and self.mana > 40 and self.spells[3].cooldown == 0:
             self.mana -= 40
             self.spells[3].cooldown += 120
-            self.spells[3].use()
+            self.spellsOnField.append(Mana_arrow())
+            self.spellsOnField[-1].use(self, tick)
 
     def update(self, tick=0):
-        for cd in range(len(self.spells)):
-            self.spells[cd].update(self, tick)
+        for spell in self.spellsOnField:
+            spell.update(self, tick)
         if self.attack != 0:
             self.attack -= 1
         if tick % 60 == 0:
@@ -77,7 +87,8 @@ class WaveController(sprite.Sprite):
 
     def move_up(self):
         self.direction = 1
-        self.rect.y += -5
+        if self.rect.y -5 >= 0:
+            self.rect.y += -5
         self.pos[1] = self.rect.y
         self.image = self.up[self.i]
         if self.i < len(self.up) - 1:
@@ -90,7 +101,8 @@ class WaveController(sprite.Sprite):
 
     def move_down(self):
         self.direction = 0
-        self.rect.y += 5
+        if self.rect.y + 5 <= screen.get_size()[1]:
+            self.rect.y += 5
         self.pos[1] = self.rect.y
         self.image = self.down[self.i]
         if self.i < len(self.down) - 1:
@@ -103,7 +115,8 @@ class WaveController(sprite.Sprite):
 
     def move_right(self):
         self.direction = 2
-        self.rect.x += 5
+        if self.rect.x + 5 <= screen.get_size()[0]:
+            self.rect.x += 5
         self.pos[0] = self.rect.x
         self.image = self.right[self.i]
         if self.i < len(self.right) - 1:
@@ -116,7 +129,8 @@ class WaveController(sprite.Sprite):
 
     def move_left(self):
         self.direction = 3
-        self.rect.x += -5
+        if self.rect.x -5 >= 0:
+            self.rect.x += -5
         self.pos[0] = self.rect.x
         self.image = self.left[self.i]
         if self.i < len(self.left)-1:
@@ -147,18 +161,64 @@ class SpearBearer(sprite.Sprite):
         player.add(self)
         all_sprites.add(self)
 
-    def up(self):
-        self.rect.y += -5
+        def move_up(self):
+            self.direction = 1
+            if self.rect.y - 5 >= 0:
+                self.rect.y += -5
+            self.pos[1] = self.rect.y
+            self.image = self.up[self.i]
+            if self.i < len(self.up) - 1:
+                self.i += 1
+            else:
+                self.i = 0
+            self.rect = self.image.get_rect()
+            self.rect.x = self.pos[0]
+            self.rect.y = self.pos[1]
 
-    def down(self):
-        self.rect.y += 5
+        def move_down(self):
+            self.direction = 0
+            if self.rect.y + 5 <= screen.get_size()[1]:
+                self.rect.y += 5
+            self.pos[1] = self.rect.y
+            self.image = self.down[self.i]
+            if self.i < len(self.down) - 1:
+                self.i += 1
+            else:
+                self.i = 0
+            self.rect = self.image.get_rect()
+            self.rect.x = self.pos[0]
+            self.rect.y = self.pos[1]
 
-    def right(self):
-        self.rect.x += 5
+        def move_right(self):
+            self.direction = 2
+            if self.rect.x + 5 <= screen.get_size()[0]:
+                self.rect.x += 5
+            self.pos[0] = self.rect.x
+            self.image = self.right[self.i]
+            if self.i < len(self.right) - 1:
+                self.i += 1
+            else:
+                self.i = 0
+            self.rect = self.image.get_rect()
+            self.rect.x = self.pos[0]
+            self.rect.y = self.pos[1]
 
-    def left(self):
-        self.rect.x += -5
+        def move_left(self):
+            self.direction = 3
+            if self.rect.x - 5 >= 0:
+                self.rect.x += -5
+            self.pos[0] = self.rect.x
+            self.image = self.left[self.i]
+            if self.i < len(self.left) - 1:
+                self.i += 1
+            else:
+                self.i = 0
+            self.rect = self.image.get_rect()
+            self.rect.x = self.pos[0]
+            self.rect.y = self.pos[1]
 
+        def get_pos(self):
+            return self.pos
 
 
 class Fisherman(sprite.Sprite):
