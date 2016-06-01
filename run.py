@@ -37,7 +37,6 @@ def run_Game():
     main_menu = Main_menu()
     pause_menu = Pause_menu()
     #main_menu.draw()
-    level = LevelOne()
     onMenu = 0
     onGame = 1
     tick = 0
@@ -63,9 +62,12 @@ def run_Game():
         player = WaveController()
     elif main_menu.charSelect == 1:
         player = SpearBearer()
+    level = LevelOne()
     level.draw()
     camera = Camera(level.image.get_size()[0], level.image.get_size()[1])
     while onGame:
+            if level.cleared():
+                level = LevelTwo()
             keys = key.get_pressed()
             for ev in event.get():
                 if ev.type == QUIT:
@@ -80,19 +82,20 @@ def run_Game():
                         player.action(ev.key, tick)
             if keys[K_DOWN]:
                 player.move_down()
-                level.update(player,2)
+                level.update(player, 2)
             if keys[K_UP]:
-                level.update(player,3)
+                level.update(player, 3)
                 player.move_up()
             if keys[K_RIGHT]:
                 player.move_right()
-                level.update(player,1)
+                level.update(player, 1)
             if keys[K_LEFT]:
                 player.move_left()
-                level.update(player,0)
+                level.update(player, 0)
             level.draw()
             player.update(tick)
             all_sprites.draw(screen)
+            enemies.update(player, tick)
             spells.draw(screen)
             display.update()
             tick += 1

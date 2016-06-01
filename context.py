@@ -19,6 +19,10 @@ screen = display.set_mode(size)
 display.set_caption("Tower Of God game")
 clock = time.Clock()
 
+
+ch1 = mixer.Channel(1)
+ch2 = mixer.Channel(2)
+
 all_sprites = sprite.Group()
 
 npcs = sprite.Group()

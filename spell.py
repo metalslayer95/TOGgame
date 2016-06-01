@@ -5,11 +5,12 @@ from context import *
 class Mana_arrow(sprite.Sprite):
     def __init__(self):
         sprite.Sprite.__init__(self)
-        self.image = image.load(path + "/sprites/wave_spells/mana_shield.png")
-        self.image = transform.scale(self.image, [50, 50])
+        self.image = image.load(path + "/sprites/wave_controller/spells/mana_arrow.png")
+        #self.image = transform.scale(self.image, [50, 50])
         self.rect = self.image.get_rect()
         self.cooldown = 0
         self.direction = -1
+        self.sound = mixer.Sound(path + "/music/arrow_cast.wav")
         self.damage = 0
         self.distance = 1000
         self.update = self._update
@@ -17,6 +18,15 @@ class Mana_arrow(sprite.Sprite):
     def _update(self, player, tick):
         self.damage = 20 + int(player.intelligence * 0.2)
         self.direction = player.direction
+        if self.direction == 0:
+            self.image = transform.rotate(self.image, 270)
+            self.rect = self.image.get_rect()
+        if self.direction == 1:
+            self.image = transform.rotate(self.image, 90)
+            self.rect = self.image.get_rect()
+        if self.direction == 3:
+            self.image = transform.rotate(self.image, 180)
+            self.rect = self.image.get_rect()
         self.rect.x = player.rect.x
         self.rect.y = player.rect.y
 
@@ -38,6 +48,7 @@ class Mana_arrow(sprite.Sprite):
             self.update = self._update
 
     def use(self,player,tick):
+        ch2.play(self.sound)
         spells.add(self)
         self.update(player, tick)
         self.update = self.moving
@@ -50,10 +61,10 @@ class Mana_arrow(sprite.Sprite):
 class Mana_bomb(sprite.Sprite):
     def __init__(self):
         sprite.Sprite.__init__(self)
-        self.image = image.load(path + "/sprites/wave_spells/mana_shield.png")
-        self.image = transform.scale(self.image, [50, 50])
+        self.image = image.load(path + "/sprites/wave_controller/spells/mana_bomb.png")
         self.rect = self.image.get_rect()
         self.cooldown = 0
+        self.sound = mixer.Sound(path + "/music/arrow_cast.wav")
         self.direction = -1
         self.distance = 500
         self.damage = 0
@@ -83,6 +94,7 @@ class Mana_bomb(sprite.Sprite):
             self.update = self._update
 
     def use(self,player,tick):
+        ch2.play(self.sound)
         spells.add(self)
         self.update(player, tick)
         self.update = self.moving
@@ -96,9 +108,10 @@ class Mana_bomb(sprite.Sprite):
 class Mana_shield(sprite.Sprite):
     def __init__(self):
         sprite.Sprite.__init__(self)
-        self.image = image.load(path + "/sprites/wave_spells/mana_shield.png")
+        self.image = image.load(path + "/sprites/wave_controller/spells/mana_shield.png")
         self.image = transform.scale(self.image, [110, 110])
         self.rect = self.image.get_rect()
+        self.sound = mixer.Sound(path + "/music/mana_shield.wav")
         self.cooldown = 0
         self.time = 0
         self.used = 0
@@ -114,7 +127,7 @@ class Mana_shield(sprite.Sprite):
 
     def use(self):
         if self.used == 0:
-            print "used mana shield"
+            ch2.play(self.sound)
             self.used = 1
             self.time = 30
             spells.add(self)
@@ -126,7 +139,7 @@ class Mana_shield(sprite.Sprite):
 class Mana_storm(sprite.Sprite):
     def __init__(self):
         sprite.Sprite.__init__(self)
-        self.image = image.load(path + "/sprites/wave_spells/mana_shield.png")
+        self.image = image.load(path + "/sprites/wave_controller/spells/mana_shield.png")
         self.rect = self.image.get_rect()
         self.cooldown = 0
         self.time = 60

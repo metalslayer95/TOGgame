@@ -9,6 +9,7 @@ class Main_menu():
         self.charSelect = 0
         self.loadSelect = 0
         self.diffSelect = 0
+        self.sound = mixer.Sound(path + "/music/main_menu.wav")
         self.screens = []
         screen_creation(self.screens)
         self.scr = self.screens[self.current_screen][self.focusOnDialog]
@@ -16,7 +17,6 @@ class Main_menu():
     def draw(self, index=0):
         if self.current_screen == len(self.screens):
             return
-
         if self.current_screen == 0: #TODO: Cambiar para transicion
             self.screens[self.current_screen][index].fadeInTransition()
         else:
@@ -26,16 +26,13 @@ class Main_menu():
     def update(self):
         # TODO: Cambiar para transicion
         if self.current_screen == 0:
+            ch1.play(self.sound, -1)
             self.screens[self.current_screen][0].fadeOutTransition()
-
         if self.current_screen < len(self.screens):
             self.current_screen += 1
         if self.current_screen == len(self.screens):
-            print "salgo",self.current_screen
+            ch1.stop()
             return
-
-        print len(self.screens)
-        print self.current_screen
         pos = self.screens[self.current_screen][self.focusOnDialog].pos
         import os
         os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (pos[0], pos[1])
@@ -48,7 +45,6 @@ class Main_menu():
         elif self.current_screen == 3 and self.focusOnDialog == 1:
             self.scr = self.screens[self.current_screen][1]
             self.scr.draw()
-
 
     def drawFocus(self):
         select = image.load("sprites/select.png")

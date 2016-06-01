@@ -227,11 +227,14 @@ def screen_creation(screens = []):
             , d2], [(wave, [200, 200]), (spear, [600, 200])])
         screens.append([scr6, scr6, scr6, scr6])
 
+sound = mixer.Sound(path + "/music/menu.wav")
 
 def first_screen(main_menu=None,ev=None):
     if ev.key == K_DOWN and main_menu.focusOnDialog < 4 and main_menu.current_screen == 1:
+        ch2.play(sound)
         main_menu.focusOnDialog += 1
     elif ev.key == K_UP and main_menu.focusOnDialog > 0 and main_menu.current_screen == 1:
+        ch2.play(sound)
         main_menu.focusOnDialog -= 1
     elif ev.key == K_RETURN and main_menu.current_screen < 2:
         main_menu.update()
@@ -246,8 +249,10 @@ def first_screen(main_menu=None,ev=None):
 def second_screen(main_menu=None, ev=None):
     if main_menu.focusOnDialog == 0 and main_menu.current_screen == 2:
         if ev.key == K_DOWN  and main_menu.diffSelect < 2:
+            ch2.play(sound)
             main_menu.diffSelect += 1
         elif ev.key == K_UP and main_menu.diffSelect > 0:
+            ch2.play(sound)
             main_menu.diffSelect -= 1
         elif ev.key == K_RETURN:
             main_menu.update()
@@ -259,8 +264,10 @@ def second_screen(main_menu=None, ev=None):
             main_menu.update()
     if main_menu.focusOnDialog == 1 and main_menu.current_screen == 2:
         if ev.key == K_DOWN  and main_menu.charSelect < 2: # aca se carga de bd
+            ch2.play(sound)
             main_menu.charSelect += 1
         elif ev.key == K_UP and main_menu.charSelect > 0:
+            ch2.play(sound)
             main_menu.charSelect -= 1
         elif ev.key == K_RETURN:
             main_menu.update()
@@ -276,8 +283,10 @@ def second_screen(main_menu=None, ev=None):
 def third_screen(main_menu=None, ev=None):
     if main_menu.focusOnDialog == 0 and main_menu.current_screen == 3:
         if ev.key == K_RIGHT and main_menu.charSelect < 1:
+            ch2.play(sound)
             main_menu.charSelect += 1
         elif ev.key == K_LEFT and main_menu.charSelect > 0:
+            ch2.play(sound)
             main_menu.charSelect -= 1
         elif ev.key == K_RETURN:
             main_menu.update()
@@ -289,3 +298,9 @@ def third_screen(main_menu=None, ev=None):
             main_menu.update()
     return 0
 
+def pixel_distance(eel, player):
+    from math import sqrt
+    if (player.rect.x-eel.rect.x)^2 + (player.rect.y-eel.rect.y)^2 > 0:
+        distance = sqrt((player.rect.x-eel.rect.x)^2 + (player.rect.y-eel.rect.y)^2)
+        return distance
+    return 0

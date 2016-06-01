@@ -5,7 +5,7 @@ from spell import *
 def charge_images(movement="", character="", nimage=0):
     array = []
     for i in range(0,nimage):
-        im = image.load(path + "/sprites/" + character + "_" + movement + "/" + str(i) + ".png")
+        im = image.load(path + "/sprites/" + character + "/" + movement + "/" + str(i) + ".png")
         im = transform.scale(im, [45, 75])
         array.append(im)
     return array
@@ -15,13 +15,13 @@ class WaveController(sprite.Sprite):
 
     def __init__(self):
         sprite.Sprite.__init__(self)
-        self.image = image.load(path + "/sprites/wave_walk_down/0.png")
+        self.image = image.load(path + "/sprites/wave_controller/walk_down/0.png")
         self.image = transform.scale(self.image, [45,75])
         self.rect = self.image.get_rect()
-        self.left = charge_images("walk_left", "wave", 8)
-        self.up = charge_images("walk_up", "wave", 8)
-        self.down = charge_images("walk_down", "wave", 8)
-        self.right = charge_images("walk_right", "wave", 8)
+        self.left = charge_images("walk_left", "wave_controller", 8)
+        self.up = charge_images("walk_up", "wave_controller", 8)
+        self.down = charge_images("walk_down", "wave_controller", 8)
+        self.right = charge_images("walk_right", "wave_controller", 8)
         self.rect.x = screen.get_size()[0]/2
         self.rect.y = screen.get_size()[1]/2
         self.spells = [Mana_arrow(), Mana_shield(), Mana_bomb(), Mana_storm()]
@@ -45,9 +45,6 @@ class WaveController(sprite.Sprite):
         self.rect.y += dy
 
     def action(self, key=None, tick=0):
-        print self.spellsOnField
-        for spell in self.spells:
-            print spell.cooldown,
         if key == K_SPACE and self.attack == 0:
             self.attack += 60
         elif key == K_q and self.mana > 10 and self.spells[0].cooldown == 0:
