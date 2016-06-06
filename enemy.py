@@ -11,30 +11,32 @@ class Eel(sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = size_x
         self.rect.y = size_y
-        self.spells = [Mana_bomb()]
+        self.type = "enemy"
         self.spellsOnField = []
+        self.hp = 1000
         self.intelligence = 30
         self.attack = 1
         self.direction = 0
+        enemies.add(self)
+        all_sprites.add(self)
 
     def update(self, player, tick):
-        print pixel_distance(self,player)
-        if pixel_distance(self,player) <= 17:
+        if pixel_distance(self, player) <= 17:
             self.update = self.engage
 
     def engage(self, player, tick):
-        print "engaged"
+        print "Engage", self.attack
         if self.attack == 1:
             self.spellsOnField.append(Mana_bomb())
+            self.spellsOnField[-1].update(self, tick)
+            self.spellsOnField[-1].use(self, tick)
             self.attack = 0
         for spell in self.spellsOnField:
             spell.update(self, tick)
-        if tick % 60 == 0:
-            for cd in range(len(self.spells)):
-                if self.spells[cd].cooldown != 0:
-                    self.spells[cd].cooldown -= 1
-        elif tick % 300 == 0:
+        if tick % 300 == 0:
             self.attack = 1
+        if self.hp <= 0:
+            enemies.remove(self)
 
     def change_pos(self, dx, dy):
         self.rect.x += dx

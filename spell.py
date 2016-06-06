@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from context import *
 
-
 class Mana_arrow(sprite.Sprite):
     def __init__(self):
         sprite.Sprite.__init__(self)
@@ -68,9 +67,8 @@ class Mana_bomb(sprite.Sprite):
         self.direction = -1
         self.distance = 500
         self.damage = 0
-        self.update = self._update
 
-    def _update(self, player,tick):
+    def update(self, player, tick):
         self.damage = 80 + int(player.intelligence * 0.7)
         self.direction = player.direction
         self.rect.x = player.rect.x
@@ -90,12 +88,14 @@ class Mana_bomb(sprite.Sprite):
         elif self.distance == 0:
             player.spellsOnField.remove(self)
             spells.remove(self)
-            self.distance = 700
-            self.update = self._update
 
-    def use(self,player,tick):
+    def use(self, player, tick):
         ch2.play(self.sound)
-        spells.add(self)
+        if player.type is 'player':
+            spells.add(self)
+        else:
+            e_spells.add(self)
+            print "moving"
         self.update(player, tick)
         self.update = self.moving
 
@@ -114,6 +114,7 @@ class Mana_shield(sprite.Sprite):
         self.sound = mixer.Sound(path + "/music/mana_shield.wav")
         self.cooldown = 0
         self.time = 0
+        self.damage = 0
         self.used = 0
 
     def update(self, player, tick):
@@ -142,6 +143,7 @@ class Mana_storm(sprite.Sprite):
         self.image = image.load(path + "/sprites/wave_controller/spells/mana_shield.png")
         self.rect = self.image.get_rect()
         self.cooldown = 0
+        self.damage = 0
         self.time = 60
 
     def use(self):

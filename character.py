@@ -27,6 +27,7 @@ class WaveController(sprite.Sprite):
         self.spells = [Mana_arrow(), Mana_shield(), Mana_bomb(), Mana_storm()]
         self.spellsOnField = []
         self.i = 0
+        self.type = "player"
         self.attack = 0
         self.pos = [self.rect.x, self.rect.y]
         self.hp = 130
@@ -80,6 +81,8 @@ class WaveController(sprite.Sprite):
 
         elif tick % 180 == 0 and self.mana != self.intelligence*10:
             self.mana += int(self.intelligence * 1.5)
+        if self.hp <= 0:
+            enemies.remove(self)
 
 
     def move_up(self):
@@ -151,6 +154,7 @@ class SpearBearer(sprite.Sprite):
         self.maxfury = 100
         self.fury = 0
         self.strength = 13
+        self.type = "player"
         self.agility = 8
         self.wisdom = 5
         self.intelligence = 3
@@ -229,9 +233,10 @@ class Fisherman(sprite.Sprite):
         self.agility = 8
         self.wisdom = 5
         self.intelligence = 3
+        self.fury = 0
         self.nextlevel = 300
 
-    def basic_attack(self):
+    def action(self):
         pass
 
     def move(self,x,y):

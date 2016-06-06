@@ -32,3 +32,5 @@ enemies = sprite.Group()
 player = sprite.Group()
 
 spells = sprite.Group()
+
+e_spells = sprite.Group()

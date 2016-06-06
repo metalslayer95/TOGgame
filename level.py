@@ -36,6 +36,8 @@ def apply_offset(offset_x,offset_y):
         sp.change_pos(offset_x, offset_y)
     for en in enemies:
         en.change_pos(offset_x, offset_y)
+    for sp in e_spells:
+        sp.change_pos(offset_x, offset_y)
 
 class LevelOne(sprite.Sprite):
     def __init__(self  ):
@@ -46,8 +48,7 @@ class LevelOne(sprite.Sprite):
         self.sound = mixer.Sound(path + "/music/level1.wav")
         ch1.play(self.sound, -1)
         eel = Eel(-self.image.get_size()[0] + 2100, -self.image.get_size()[1] + 1100)
-        enemies.add(eel)
-        all_sprites.add(eel)
+
 
     def update(self, player, direction):
         if player.rect.x <= 10 and direction == 0: # left

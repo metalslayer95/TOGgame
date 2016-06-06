@@ -304,3 +304,23 @@ def pixel_distance(eel, player):
         distance = sqrt((player.rect.x-eel.rect.x)^2 + (player.rect.y-eel.rect.y)^2)
         return distance
     return 0
+
+def check_collisions():
+    hit = None
+    for sp in spells:
+            hit = sprite.spritecollide(sp, enemies, False)
+            for enemy in hit:
+                enemy.hp -= sp.damage
+                spells.remove(sp)
+
+    #print hit
+    for sp in e_spells:
+        hit = sprite.spritecollide(sp, player, False)
+        for pla in player:
+            pla.hp -= sp.damage
+            print "hp",pla.hp
+            e_spells.remove(sp)
+    #print hit
+    for sp in spells:
+        sprite.spritecollide(sp, npcs, True)
+

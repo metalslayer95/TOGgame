@@ -30,8 +30,6 @@ Pausa:
 '''
 
 
-
-
  ## modo testing de juego, menu obviado
 def run_Game():
     main_menu = Main_menu()
@@ -92,11 +90,13 @@ def run_Game():
             if keys[K_LEFT]:
                 player.move_left()
                 level.update(player, 0)
+            check_collisions()
             level.draw()
             player.update(tick)
             all_sprites.draw(screen)
             enemies.update(player, tick)
             spells.draw(screen)
+            e_spells.draw(screen)
             display.update()
             tick += 1
             clock.tick(60)
