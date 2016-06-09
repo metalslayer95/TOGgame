@@ -72,6 +72,7 @@ class LevelOne(sprite.Sprite):
                 player.change_pos(0, 100)
                 apply_offset(0, 100)
 
+
     def draw(self):
         screen.blit(self.image,self.rect)
 

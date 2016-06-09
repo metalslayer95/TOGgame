@@ -298,12 +298,16 @@ def third_screen(main_menu=None, ev=None):
             main_menu.update()
     return 0
 
+
 def pixel_distance(eel, player):
     from math import sqrt
+    distance = -1
     if (player.rect.x-eel.rect.x)^2 + (player.rect.y-eel.rect.y)^2 > 0:
         distance = sqrt((player.rect.x-eel.rect.x)^2 + (player.rect.y-eel.rect.y)^2)
-        return distance
-    return 0
+    elif(player.rect.x-eel.rect.x)^2 + (player.rect.y-eel.rect.y)^2 < 0:
+        distance = sqrt(((player.rect.x-eel.rect.x)^2 + (player.rect.y-eel.rect.y)^2)*-1)
+    return distance
+
 
 def check_collisions():
     hit = None
@@ -312,15 +316,12 @@ def check_collisions():
             for enemy in hit:
                 enemy.hp -= sp.damage
                 spells.remove(sp)
-
-    #print hit
     for sp in e_spells:
-        hit = sprite.spritecollide(sp, player, False)
-        for pla in player:
-            pla.hp -= sp.damage
-            print "hp",pla.hp
-            e_spells.remove(sp)
-    #print hit
+        hit = sprite.spritecollide(sp, players, False)
+        if hit is not None and hit != []:
+            for pla in players:
+                e_spells.remove(sp)
+                pla.hp -= sp.damage
     for sp in spells:
         sprite.spritecollide(sp, npcs, True)
 

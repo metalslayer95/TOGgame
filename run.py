@@ -2,6 +2,7 @@
 from main_menu import *
 from level import *
 from character import *
+from HUD import *
 '''
 Final
 Usar TilesMap
@@ -60,6 +61,8 @@ def run_Game():
         player = WaveController()
     elif main_menu.charSelect == 1:
         player = SpearBearer()
+
+    hud = HUD(player)
     level = LevelOne()
     level.draw()
     camera = Camera(level.image.get_size()[0], level.image.get_size()[1])
@@ -94,6 +97,7 @@ def run_Game():
             level.draw()
             player.update(tick)
             all_sprites.draw(screen)
+            hud.draw(player)
             enemies.update(player, tick)
             spells.draw(screen)
             e_spells.draw(screen)

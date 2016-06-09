@@ -88,6 +88,7 @@ class Mana_bomb(sprite.Sprite):
         elif self.distance == 0:
             player.spellsOnField.remove(self)
             spells.remove(self)
+            e_spells.remove(self)
 
     def use(self, player, tick):
         ch2.play(self.sound)
@@ -95,7 +96,6 @@ class Mana_bomb(sprite.Sprite):
             spells.add(self)
         else:
             e_spells.add(self)
-            print "moving"
         self.update(player, tick)
         self.update = self.moving
 

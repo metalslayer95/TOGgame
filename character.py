@@ -30,15 +30,17 @@ class WaveController(sprite.Sprite):
         self.type = "player"
         self.attack = 0
         self.pos = [self.rect.x, self.rect.y]
+        self.hpmax = 130
         self.hp = 130
         self.strength = 3
         self.agility = 5
         self.wisdom = 9
         self.intelligence = 12
-        self.mana = 10000#self.intelligence * 10
+        self.mana = self.intelligence * 10
+        self.manamax = self.intelligence * 10
         self.nextlevel = 300
         self.direction = 0
-        player.add(self)
+        players.add(self)
         all_sprites.add(self)
 
     def change_pos(self, dx, dy):
@@ -69,6 +71,11 @@ class WaveController(sprite.Sprite):
             self.spellsOnField.append(Mana_arrow())
             self.spellsOnField[-1].use(self, tick)
 
+    def kill(self, enemy):
+        self.nextlevel -= enemy.xpOnDeath
+        if self.nextlevel <= 0:
+            self.nextlevel = 600
+
     def update(self, tick=0):
         for spell in self.spellsOnField:
             spell.update(self, tick)
@@ -79,8 +86,10 @@ class WaveController(sprite.Sprite):
                 if self.spells[cd].cooldown != 0:
                     self.spells[cd].cooldown -= 1
 
-        elif tick % 180 == 0 and self.mana != self.intelligence*10:
-            self.mana += int(self.intelligence * 1.5)
+        if tick % 180 == 0 and self.mana + int(self.intelligence * 1) <= self.manamax:
+            self.mana += int(self.intelligence * 1)
+        elif self.mana + int(self.intelligence * 1) >= self.manamax:
+            self.mana = self.manamax
         if self.hp <= 0:
             enemies.remove(self)
 
@@ -159,7 +168,7 @@ class SpearBearer(sprite.Sprite):
         self.wisdom = 5
         self.intelligence = 3
         self.nextlevel = 300
-        player.add(self)
+        players.add(self)
         all_sprites.add(self)
 
         def move_up(self):
