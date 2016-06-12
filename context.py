@@ -19,6 +19,7 @@ cx, cy = ancho / 2, alto / 2
 init()
 screen = display.set_mode(size)
 display.set_caption("Tower Of God game")
+difficulty = 1
 
 monospace_big = font.SysFont("monospace", 24)
 monospace_big.set_bold(1)

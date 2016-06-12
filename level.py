@@ -72,12 +72,37 @@ class LevelOne(sprite.Sprite):
                 player.change_pos(0, 100)
                 apply_offset(0, 100)
 
+    def update(self, player, direction):
+        if player.rect.x <= 10 and direction == 0: # left
+            if self.rect.x + 30 <= 0 :
+                self.rect.x += 30
+                player.change_pos(30, 0)
+                apply_offset(30, 0)
+        elif player.rect.x >= 1014  and direction == 1: # right
+            if self.rect.x - 40 >= -self.image.get_size()[0] + screen.get_size()[0] + 50:
+                self.rect.x -= 40
+                player.change_pos(-40, 0)
+                apply_offset(-40, 0)
+        elif player.rect.y >= 690 and direction == 2: # down
+            if self.rect.y - 100 >= -self.image.get_size()[1] + screen.get_size()[1] - 150:
+                self.rect.y -= 100
+                player.change_pos(0, -100)
+                apply_offset(0, -100)
+        elif player.rect.y <= 10 and direction == 3: #up
+            if self.rect.y + 100 <= -100:
+                self.rect.y += 100
+                player.change_pos(0, 100)
+                apply_offset(0, 100)
+
 
     def draw(self):
         screen.blit(self.image,self.rect)
 
     def cleared(self):
         if len(enemies) == 0:
+            enemies.clear()
+            spells.clear()
+            e_spells.clear()
             ch1.stop()
             return 1
 
@@ -88,9 +113,32 @@ class LevelTwo(sprite.Sprite):
         self.image = image.load(path + "/level1.png")
         self.rect = self.image.get_rect()
         self.rect.x, self.rect.y = -self.image.get_size()[0] + 1324, -self.image.get_size()[1] + 700
-        self.sound = mixer.Sound(path + "/music/level1.wav")
+        self.sound = mixer.Sound(path + "/music/level2.wav")
         ch1.play(self.sound, -1)
+        Fighter1(-self.image.get_size()[0] + 800, -self.image.get_size()[1] + 1500)
+        Fighter2(-self.image.get_size()[0] + 1800, -self.image.get_size()[1] + 1500)
 
+    def update(self, player, direction):
+        if player.rect.x <= 10 and direction == 0: # left
+            if self.rect.x + 30 <= 0 :
+                self.rect.x += 30
+                player.change_pos(30, 0)
+                apply_offset(30, 0)
+        elif player.rect.x >= 1014  and direction == 1: # right
+            if self.rect.x - 40 >= -self.image.get_size()[0] + screen.get_size()[0] + 50:
+                self.rect.x -= 40
+                player.change_pos(-40, 0)
+                apply_offset(-40, 0)
+        elif player.rect.y >= 690 and direction == 2: # down
+            if self.rect.y - 100 >= -self.image.get_size()[1] + screen.get_size()[1] - 150:
+                self.rect.y -= 100
+                player.change_pos(0, -100)
+                apply_offset(0, -100)
+        elif player.rect.y <= 10 and direction == 3: #up
+            if self.rect.y + 100 <= -100:
+                self.rect.y += 100
+                player.change_pos(0, 100)
+                apply_offset(0, 100)
 
     def draw(self):
         screen.blit(self.image, self.rect)

@@ -59,15 +59,17 @@ def run_Game():
     display.set_mode((1024,700))
     if main_menu.charSelect == 0:
         player = WaveController()
-    elif main_menu.charSelect == 1:
+    else:
         player = SpearBearer()
 
     hud = HUD(player)
-    level = LevelOne()
+    level = LevelTwo()
     level.draw()
     camera = Camera(level.image.get_size()[0], level.image.get_size()[1])
     while onGame:
             if level.cleared():
+                player.hp = player.hpmax
+                player.mana = player.manamax
                 level = LevelTwo()
             keys = key.get_pressed()
             for ev in event.get():

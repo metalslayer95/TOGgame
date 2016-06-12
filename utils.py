@@ -209,7 +209,7 @@ def screen_creation(screens = []):
         p2 = Dialog("Personaje b nivel Y",[400,380],None,20)
         scr4 = Screen("sprites/main_menu_screen.jpg", (900, 700), (200, 25), [p1,p2], [])
 
-        d = Dialog("Modo versus en desarrollo",[400,300],None,20)
+        d = Dialog("Modo versus en desarrollo",[200,300],None,20)
         scr5 = Screen(path + "/sprites/main_menu_screen.jpg", (900, 700), (200, 25), [d], [])
 
         screens.append([scr3, scr4, scr5, scr5, scr5])
@@ -219,7 +219,7 @@ def screen_creation(screens = []):
         wavedialog = Dialog("Ataques magicos",[250, 600], None, 10)
         d2 = Dialog("Spear bearer",[600, 550], None, 20)
         speardialog = Dialog("Ataques fisicos",[650, 600], None, 10)
-        wave = image.load(path + "/sprites/wave_character.png")
+        wave = image.load(path + "/sprites/wave_character.png").convert_alpha()
         wave = transform.scale(wave, (300,300))
         spear = image.load(path + "/sprites/spear_character.png")
         spear = transform.scale(spear, (300,300))
@@ -314,14 +314,26 @@ def check_collisions():
     for sp in spells:
             hit = sprite.spritecollide(sp, enemies, False)
             for enemy in hit:
-                enemy.hp -= sp.damage
+                ch2.play(sp.collidesound)
+                enemy.hit(sp.damage)
                 spells.remove(sp)
     for sp in e_spells:
         hit = sprite.spritecollide(sp, players, False)
         if hit is not None and hit != []:
-            for pla in players:
+            for pla in hit:
+                ch2.play(sp.collidesound)
                 e_spells.remove(sp)
-                pla.hp -= sp.damage
+                pla.hit(sp.damage)
     for sp in spells:
         sprite.spritecollide(sp, npcs, True)
 
+
+
+def charge_images(movement="", character="", nimage=0, transformate=1):
+    array = []
+    for i in range(0, nimage):
+        im = image.load(path + "/sprites/" + character + "/" + movement + "/" + str(i) + ".png")
+        if transformate:
+            im = transform.scale(im, [45, 75])
+        array.append(im)
+    return array
