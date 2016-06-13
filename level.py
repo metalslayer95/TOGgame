@@ -46,6 +46,7 @@ class LevelOne(sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x, self.rect.y = -self.image.get_size()[0] + 1324, -self.image.get_size()[1] + 700
         self.sound = mixer.Sound(path + "/music/level1.wav")
+        self.level = 1
         ch1.play(self.sound, -1)
         eel = Eel(-self.image.get_size()[0] + 2100, -self.image.get_size()[1] + 1100)
 
@@ -110,17 +111,18 @@ class LevelOne(sprite.Sprite):
 class LevelTwo(sprite.Sprite):
     def __init__(self):
         sprite.Sprite.__init__(self)
-        self.image = image.load(path + "/level1.png")
+        self.image = image.load(path + "/level2.png")
         self.rect = self.image.get_rect()
         self.rect.x, self.rect.y = -self.image.get_size()[0] + 1324, -self.image.get_size()[1] + 700
         self.sound = mixer.Sound(path + "/music/level2.wav")
         ch1.play(self.sound, -1)
-        Fighter1(-self.image.get_size()[0] + 800, -self.image.get_size()[1] + 1500)
-        Fighter2(-self.image.get_size()[0] + 1800, -self.image.get_size()[1] + 1500)
+        Fighter1(-self.image.get_size()[0] + 800, -self.image.get_size()[1] + 2000)
+        Anak(-self.image.get_size()[0] + 1000, -self.image.get_size()[1] + 2300)
+        Fighter2(-self.image.get_size()[0] + 1500, -self.image.get_size()[1] + 1500)
 
     def update(self, player, direction):
         if player.rect.x <= 10 and direction == 0: # left
-            if self.rect.x + 30 <= 0 :
+            if self.rect.x + 30 <= 0:
                 self.rect.x += 30
                 player.change_pos(30, 0)
                 apply_offset(30, 0)
@@ -145,5 +147,52 @@ class LevelTwo(sprite.Sprite):
 
     def cleared(self):
         if len(enemies) == 0:
+            enemies.empty()
+            spells.empty()
+            e_spells.empty()
             ch1.stop()
-            return 1
+            return 2
+
+
+class LevelTwoPointOne(sprite.Sprite):
+            def __init__(self):
+                sprite.Sprite.__init__(self)
+                self.image = image.load(path + "/level21.png")
+                self.rect = self.image.get_rect()
+                self.rect.x, self.rect.y = -self.image.get_size()[0] + 1324, -self.image.get_size()[1] + 700
+                self.sound = mixer.Sound(path + "/music/level21.wav")
+                ch1.play(self.sound, -1)
+                Urek(-self.image.get_size()[0] + 800, -self.image.get_size()[1] + 2000)
+
+            def update(self, player, direction):
+                if player.rect.x <= 10 and direction == 0:  # left
+                    if self.rect.x + 30 <= 0:
+                        self.rect.x += 30
+                        player.change_pos(30, 0)
+                        apply_offset(30, 0)
+                elif player.rect.x >= 1014 and direction == 1:  # right
+                    if self.rect.x - 40 >= -self.image.get_size()[0] + screen.get_size()[0] + 50:
+                        self.rect.x -= 40
+                        player.change_pos(-40, 0)
+                        apply_offset(-40, 0)
+                elif player.rect.y >= 690 and direction == 2:  # down
+                    if self.rect.y - 100 >= -self.image.get_size()[1] + screen.get_size()[1] - 150:
+                        self.rect.y -= 100
+                        player.change_pos(0, -100)
+                        apply_offset(0, -100)
+                elif player.rect.y <= 10 and direction == 3:  # up
+                    if self.rect.y + 100 <= -100:
+                        self.rect.y += 100
+                        player.change_pos(0, 100)
+                        apply_offset(0, 100)
+
+            def draw(self):
+                screen.blit(self.image, self.rect)
+
+            def cleared(self):
+                if len(enemies) == 0:
+                    enemies.empty()
+                    spells.empty()
+                    e_spells.empty()
+                    ch1.stop()
+                    return 2

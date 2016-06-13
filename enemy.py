@@ -293,8 +293,8 @@ class Anak(Enemy):
         self.up = charge_images("walk_up", "anak", 8)
         self.down = charge_images("walk_down", "anak", 8)
         self.right = charge_images("walk_right", "anak", 8)
-        self.dead = charge_images("dead", "anak", 5)
-        self.type = "boss"
+        #self.dead = charge_images("dead", "anak", 5)
+        self.type = "enemy"
         self.spellsOnField = []
         self.hp = 150
         self.intelligence = 30
@@ -327,6 +327,73 @@ class Anak(Enemy):
             self.move_left()
 
     def engage(self, player, tick):
+        self.movement(player.rect.x, player.rect.y)
+        if self.attack == 1:
+            self.spellsOnField.append(Mana_arrow())
+            self.spellsOnField[-1].use(self, tick)
+            self.attack = 0
+        for spell in self.spellsOnField:
+            spell.update(player, tick)
+        if tick % 30 == 0:
+            self.attack = 1
+        if self.hp <= 0:
+            player.kill(self)
+            enemies.remove(self)
+            all_sprites.remove(self)
+
+    def change_pos(self, dx, dy):
+        self.rect.x += dx
+        self.rect.y += dy
+
+class Urek(Enemy):
+    def __init__(self, size_x, size_y):
+        super(Enemy, self).__init__()
+        self.image = image.load(path + "/sprites/urek/walk_down/0.png")
+        self.image = transform.scale(self.image, [45,75])
+        self.rect = self.image.get_rect()
+        self.rect.x = size_x
+        self.rect.y = size_y
+        self.left = charge_images("walk_left", "urek", 8)
+        self.up = charge_images("walk_up", "urek", 8)
+        self.down = charge_images("walk_down", "urek", 8)
+        self.right = charge_images("walk_right", "urek", 8)
+        #self.dead = charge_images("dead", "anak", 5)
+        self.type = "boss"
+        self.spellsOnField = []
+        self.hp = 500
+        self.hpmax = 500
+        self.intelligence = 30
+        self.strenght = 100
+        self.attack = 1
+        self.pos = [self.rect.x, self.rect.y]
+        self.direction = 0
+        self.xpOnDeath = 500
+        enemies.add(self)
+        self.i = 0
+        all_sprites.add(self)
+
+    def hit(self,damage):
+        self.hp -= damage
+        if self.hp <= 0:
+            enemies.remove(self)
+            all_sprites.remove(self)
+
+    def update(self, player, tick):
+        if 0 < pixel_distance(self, player) <= 50 :
+            self.update = self.engage
+
+    def movement(self,x,y):
+        if(x > self.rect.x):
+            self.move_up()
+        if(x < self.rect.x):
+            self.move_down()
+        if(y > self.rect.y):
+            self.move_right()
+        if(y < self.rect.y):
+            self.move_left()
+
+    def engage(self, player, tick):
+        screen.blit
         self.movement(player.rect.x, player.rect.y)
         if self.attack == 1:
             self.spellsOnField.append(Mana_arrow())

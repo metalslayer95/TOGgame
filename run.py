@@ -35,9 +35,9 @@ Pausa:
 def run_Game():
     main_menu = Main_menu()
     pause_menu = Pause_menu()
-    #main_menu.draw()
-    onMenu = 0
-    onGame = 1
+    main_menu.draw()
+    onMenu = 1
+    onGame = 0
     tick = 0
     while onMenu:
         for ev in event.get():
@@ -56,21 +56,25 @@ def run_Game():
                     main_menu.current_screen -= 1
         display.update()
         clock.tick(60)
-    display.set_mode((1024,700))
+    display.set_mode((1024, 700))
     if main_menu.charSelect == 0:
         player = WaveController()
     else:
         player = SpearBearer()
 
     hud = HUD(player)
-    level = LevelTwo()
+    level = LevelOne()
     level.draw()
     camera = Camera(level.image.get_size()[0], level.image.get_size()[1])
     while onGame:
-            if level.cleared():
+            if level.cleared() == 1:
                 player.hp = player.hpmax
                 player.mana = player.manamax
                 level = LevelTwo()
+            elif level.cleared() == 2:
+                player.hp = player.hpmax
+                player.mana = player.manamax
+                level = LevelTwoPointOne()
             keys = key.get_pressed()
             for ev in event.get():
                 if ev.type == QUIT:
@@ -81,6 +85,10 @@ def run_Game():
                     if ev.key == K_p:
                         image.save(screen, path + "/.tmp/game.png")
                         pause_menu.paused()
+                    elif ev.key == K_k:
+                        all_sprites.remove(enemies)
+                        enemies.empty()
+
                     else:
                         player.action(ev.key, tick)
             if keys[K_DOWN]:
@@ -109,7 +117,7 @@ def run_Game():
     quit()
 
 if __name__ == '__main__':
-    #try:
-    run_Game()
-    #except:
-    #    raise UserWarning, "Ha ocurrido un problema y el juego debe cerrarse."
+    try:
+        run_Game()
+    except:
+        raise UserWarning, "Ha ocurrido un problema y el juego debe cerrarse."
